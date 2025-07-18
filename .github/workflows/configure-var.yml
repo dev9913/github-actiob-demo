@@ -11,4 +11,4 @@ jobs:
        name1: dev
      steps:
        - name: show Data
-         run: echo " $name1 is use $cloud cloud ${{ PRESENT}}        
+         run: echo " $name1 is use $cloud cloud ${{ github.repository.PRESENT}}        
