@@ -1,0 +1,14 @@
+name: Creating Variable
+on:
+  workflow_dispatch
+
+env:
+  cloud: aws
+jobs:
+  greeting_job:
+     runs-on: ubuntu-latest
+     env: 
+       name: dev
+     steps:
+       - name: show Data
+         run: echo " $dev is use $cloud cloud ${{ PRESENT}}        
