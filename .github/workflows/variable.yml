@@ -7,6 +7,7 @@ env:
    greeting_job:
      runs_on: ubuntu-latest
      env:
-       Greeting:  Hello
+       greeting:  Hello
      steps:
-     - name: 
+       - name: Run a one-line script
+         run: echo ${{ greeting}} use ${{ cloud }} cloud. !
