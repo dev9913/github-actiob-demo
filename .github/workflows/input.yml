@@ -20,4 +20,4 @@ jobs:
 
     steps:
     - name: Send greeting
-      run: echo " ${{ github.event.inputs.number1.description }} and ${{ github.event.inputs.number1.description }}! " 
+      run: echo " ${{ github.event.inputs.number1}} and ${{ github.event.inputs.number1}}! " 
