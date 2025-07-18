@@ -1,0 +1,12 @@
+name : Variable
+on:
+  workflow_dispatch
+env:
+  cloud: aws
+ job:
+   greeting_job:
+     runs_on: ubuntu-latest
+     env:
+       Greeting:  Hello
+     steps:
+     - name: 
