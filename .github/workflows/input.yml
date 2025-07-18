@@ -20,4 +20,6 @@ jobs:
 
     steps:
     - name: Send greeting
-      run: echo " ${{ github.event.inputs.number1}} and ${{ github.event.inputs.number1}}! " 
+      run: echo " ${{ github.event.inputs.number1}} and ${{ github.event.inputs.number2}}! "
+    - name: add numbers
+      run: echo " (${{ github.event.inputs.number1}} + ${{ github.event.inputs.number2}})
