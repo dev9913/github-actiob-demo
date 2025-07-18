@@ -7,7 +7,7 @@ jobs:
   greeting_job:
     runs-on: ubuntu-latest
     env:
-       greeting:  Hello
+       greeting:  DEV
     steps:
       - name: Run a one-line script
         run: echo "$greeting using $cloud cloud!"
