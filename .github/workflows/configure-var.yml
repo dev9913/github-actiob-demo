@@ -8,7 +8,7 @@ jobs:
   greeting_job:
      runs-on: ubuntu-latest
      env: 
-       name1: dev
+       name: dev
      steps:
        - name: show Data
-         run: echo " $name1 is use $cloud cloud ${{ github.repository.PRESENT}}        
+         run: echo " $name is use $cloud cloud ${{ github.repository.PRESENT}}        
