@@ -1,0 +1,23 @@
+name: inputs Variables try 
+
+on:
+  workflow_dispatch:
+    inputs:
+      number1:
+        description: "Enter one nummber"
+        required: true
+        default: '0'
+    
+      number2:
+        description: "Enter Second number"
+        required: true
+        default: '0'
+        
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Send greeting
+      run: echo " ${{ github.event.inputs.number1.description }} and ${{ github.event.inputs.number1.description }}! " 
