@@ -10,4 +10,4 @@ jobs:
        greeting:  Hello
     steps:
       - name: Run a one-line script
-        run: echo "${{greeting}} use ${{cloud}} cloud. !"
+        run: echo "$greeting use cloud cloud. !"
