@@ -3,11 +3,11 @@ on:
   workflow_dispatch
 env:
   cloud: aws
- job:
-   greeting_job:
-     runs_on: ubuntu-latest
-     env:
+jobs:
+  greeting_job:
+    runs-on: ubuntu-latest
+    env:
        greeting:  Hello
-     steps:
-       - name: Run a one-line script
-         run: echo ${{ greeting}} use ${{ cloud }} cloud. !
+    steps:
+      - name: Run a one-line script
+        run: echo "$greeting use $cloud cloud. !"
