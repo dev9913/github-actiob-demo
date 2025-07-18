@@ -1,0 +1,14 @@
+name: Secret Variable
+on:
+  workflow_dispatch
+
+env:
+  cloud: aws
+jobs:
+  greeting_job:
+     runs-on: ubuntu-latest
+     env: 
+       name: dev
+     steps:
+       - name: show Data   
+         run: echo "$name is using $cloud cloud and this ${{ sceretS.MY_SCERET}} secret ."
