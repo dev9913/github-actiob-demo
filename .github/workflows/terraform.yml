@@ -43,4 +43,4 @@
         run: terraform plan 
 
       - name: Terraform Apply (auto-approve on push to main)
-        run: terraform apply -auto-approve tfplan
+        run: terraform apply -auto-approve 
