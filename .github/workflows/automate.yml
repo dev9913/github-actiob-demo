@@ -1,15 +1,16 @@
 name: Generate terraform docs
+
 on:
   workflow_call:
+    inputs:
+      ref:
+        required: true
+        type: string
 
 permissions:
-  repository-projects: write
-  actions: write
-  checks: write
-  contents: write
-  deployments: write
-  id-token: write
-  
+  contents: write  # required for pushing changes
+  id-token: write  # useful for OIDC if needed
+
 jobs:
   docs:
     runs-on: ubuntu-latest
@@ -18,7 +19,7 @@ jobs:
       - name: Checkout PR branch
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.event.pull_request.head.ref }}
+          ref: ${{ inputs.ref }}
 
       - name: Render terraform docs and push changes back to PR
         uses: terraform-docs/gh-actions@v1.1.0
